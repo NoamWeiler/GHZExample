@@ -1,0 +1,19 @@
+
+syntax = "proto3";
+
+option go_package = "https://github.com/NoamWeiler/GHZExample";
+
+package GHZExample;
+
+service Greeter {
+  rpc SayHello (serverRequest) returns (serverResponse){}
+}
+
+message serverRequest {
+  string Name = 1;
+}
+
+message serverResponse {
+  string res = 1;
+}
+
